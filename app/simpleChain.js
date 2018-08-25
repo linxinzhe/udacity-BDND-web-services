@@ -97,6 +97,7 @@ exports.Blockchain = class Blockchain {
       return addDataToLevelDB(JSON.stringify(newBlock));
     }).then((result) => {
       console.log(`Add Block ${newBlock.body} ${result}`);
+      return newBlock;
     });
   }
 
